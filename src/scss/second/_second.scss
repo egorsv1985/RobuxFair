@@ -42,14 +42,18 @@
     position: relative;
     margin-bottom: 20px;
     @media all and (min-width: 630px) {
-      width: 460px;
+      max-width: 460px;
+      height: 60px;
+    }
+    @media all and (min-width: 930px) {
+      width: 388px;
     }
   }
-  // &__input--bottom {
-  //   @media all and (min-width: 630px) {
-  //     max-width: 500px;
-  //   }
-  // }
+  &__input--bottom {
+    @media all and (min-width: 930px) {
+      min-width: 794px;
+    }
+  }
   &__subtitle {
     font-family: Inter;
     font-style: normal;
@@ -126,14 +130,21 @@
     }
   }
   &__form {
-    margin-top: 10px;
+    padding-top: 10px;
     @media all and (min-width: 630px) {
-      margin-top: 106px;
+      padding-top: 106px;
       padding-bottom: 30px;
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
+    }
+    @media all and (min-width: 930px) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      max-width: 794px;
+      margin: 0 auto;
+      justify-content: space-between;
     }
   }
 }
