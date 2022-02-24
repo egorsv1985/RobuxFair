@@ -35,6 +35,7 @@ ul {
   display: flex;
   align-items: center;
   margin-bottom: 18px;
+  position: relative;
 }
 @media all and (min-width: 630px) {
   .second__item {
@@ -51,11 +52,6 @@ ul {
     width: 66px;
     height: 66px;
   }
-}
-.second__list__img {
-  position: relative;
-  top: 40px;
-  max-width: 100%;
 }
 @media all and (min-width: 630px) {
   .second__list {
@@ -108,14 +104,15 @@ ul {
   line-height: 17px;
   text-align: left;
   margin-left: 10px;
-  margin-top: 20px;
 }
 @media all and (min-width: 630px) {
   .second__text {
     position: absolute;
     font-size: 16px;
-    top: 220px;
+    top: 80px;
     margin-left: 0;
+    text-align: center;
+    width: 156px;
   }
 }
 .second__description {
@@ -213,4 +210,16 @@ input {
 input:focus::placeholder {
   transform: translateY(-15px);
   font-size: 10px;
+}
+
+.item__line::after {
+  content: "";
+  position: absolute;
+  background: url(./../img/second/line.svg) 0 0 no-repeat;
+  width: 23px;
+  height: 22px;
+  top: 35px;
+  left: 12px;
+  display: block;
+  transform: rotate(-90deg);
 }
