@@ -42,6 +42,7 @@ ul {
   }
 }
 .second__item__img {
+  z-index: 2;
   width: 34px;
   height: 34px;
 }
@@ -50,6 +51,11 @@ ul {
     width: 66px;
     height: 66px;
   }
+}
+.second__list__img {
+  position: relative;
+  top: 40px;
+  max-width: 100%;
 }
 @media all and (min-width: 630px) {
   .second__list {
@@ -70,6 +76,7 @@ ul {
   padding-left: 20px;
   position: relative;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 @media all and (min-width: 630px) {
   .second__input {
@@ -101,6 +108,7 @@ ul {
   line-height: 17px;
   text-align: left;
   margin-left: 10px;
+  margin-top: 20px;
 }
 @media all and (min-width: 630px) {
   .second__text {
@@ -153,11 +161,12 @@ ul {
 .second__wrap::after {
   content: "";
   position: absolute;
-  background: url(./../../img/second/Vector.png) no-repeat 50%;
-  width: 30px;
-  height: 30px;
-  top: 1px;
-  right: 1px;
+  background: url("./../img/second/Vector.svg") 0 0 no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 12px;
+  right: 12px;
+  display: block;
 }
 .second__title {
   margin-bottom: 20px;
