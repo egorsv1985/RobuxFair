@@ -5,100 +5,36 @@
 })
 
 <body>
-	<main class="main">
-		<div class="container">
-			<div class="main__inner">
-				<div class="metrics">
-					<h2 class="metrics__title">Activation</h2>
-					<table class="metrics__table">
-						<caption class="metrics__table-caption">Activation</caption>
-						<thead class="metrics__table-header">
-							<tr class="metrics__table-row">
-								<th></th>
-								<th>Jan</th>
-								<th>Dec</th>
-								<th>Nov</th>
-								<th>Oct</th>
-								<th>Sep</th>
-								<th>Aug</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="metrics__table-row">
-								<th>IOS</th>
-								<td class="text--yellow">10,4%</td>
-								<td>9,8%</td>
-								<td>9,8%</td>
-								<td>9,4%</td>
-								<td>9,0%</td>
-								<td>8,7%</td>
-							</tr>
-							<tr class="metrics__table-row">
-								<th>Android</th>
-								<td>10,4%</td>
-								<td>9,8%</td>
-								<td>9,8%</td>
-								<td>9,4%</td>
-								<td>9,0%</td>
-								<td>8,7%</td>
-							</tr>
-						</tbody>
-					</table>
 
-					<canvas id="graph_activation"></canvas>
-				</div>
-				<div class="metrics">
-					<h2 class="metrics__title">Retention</h2>
 
-					<table class="metrics__table">
-						<caption class="metrics__table-caption">Retention</caption>
-						<thead class="metrics__table-header">
-							<tr class="metrics__table-row">
-								<th></th>
-								<th>1m</th>
-								<th>2m</th>
-								<th>4m</th>
-								<th>6m</th>
-								<th>8m</th>
-								<th>10m</th>
-								<th>12m</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="metrics__table-row">
-								<th>IOS</th>
-								<td>90%</td>
-								<td>80%</td>
-								<td>80%</td>
-								<td>70%</td>
-								<td>60%</td>
-								<td>50%</td>
-								<td>40%</td>
-							</tr>
-							<tr class="metrics__table-row">
-								<th>Android</th>
-								<td>70%</td>
-								<td>60%</td>
-								<td>60%</td>
-								<td>50%</td>
-								<td>40%</td>
-								<td>30%</td>
-								<td>20%</td>
-							</tr>
-						</tbody>
-					</table>
+	<section class="second">
+		<h1 class="second__title">Купить робуксы</h1>
+		<ul class="second__list">
+			<li class="second__item"><img class="second__item__img" src="./img/1.svg" alt="">
+				<p class="second__text">Создать Game Pass</p>
+			</li>
+			<li class="second__item"><img class="second__item__img" src="./img/2.svg" alt="">
+				<p class="second__text">Выбрать его на сайте</p>
+			</li>
+			<li class="second__item"><img class="second__item__img" src="./img/3.svg" alt="">
+				<p class="second__text">Оплата</p>
+			</li>
+			<li class="second__item"><img class="second__item__img" src="./img/4.svg" alt="">
+				<p class="second__text">Оплата</p>
+			</li>
+		</ul>
 
-					<canvas id="graph_retention"></canvas>
-
-				</div>
-			</div>
+		<form class="second__form">
+			<input class="second__input" type="number" placeholder="Отдаете RUB">
+			<input class="second__input" type="number" placeholder="Получаете робуксов">
+			<input class="second__input second__input--bottom" type="text" name="name" placeholder="Введите ваш никнейм">
+		</form>
+		<div class="second__wrap">
+			<h2 class="second__subtitle">Внимание!</h2>
+			<p class="second__description">Пользователь с таким никнеймом не найден!</p>
 		</div>
-	</main>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+	</section>
 	<script src="js/app.min.js"></script>
-
 </body>
 
 </html>
