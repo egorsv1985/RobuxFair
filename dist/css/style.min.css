@@ -14,7 +14,8 @@ body {
 h1,
 h2,
 h3,
-p {
+p,
+span {
   color: #ffffff;
 }
 
@@ -289,4 +290,18 @@ input:focus::placeholder {
   .item__line::after {
     width: 220px;
   }
+}
+
+.second__block__button {
+  width: 138px;
+  height: 40px;
+  background: linear-gradient(91.78deg, #9e00ff 3.77%, #6ac4f8 102.8%);
+  border-radius: 88px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+.second__block__button:hover {
+  cursor: pointer;
+  background: linear-gradient(91.78deg, #b63fff 3.77%, #86ccf5 102.8%);
 }
