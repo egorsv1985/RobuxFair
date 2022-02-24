@@ -409,6 +409,7 @@ template {
 }
 .header {
   margin: 45px 0 10px;
+  background: url("@img/water.png") 0 0 no-repeat;
 }
 .header__wrapper {
   display: flex;
