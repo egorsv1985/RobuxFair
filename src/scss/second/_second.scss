@@ -231,7 +231,54 @@ input:focus::placeholder {
 }
 
 .second {
+  &__block-wrap {
+    display: flex;
+  }
+  &__block-cover {
+    display: flex;
+    align-items: center;
+  }
+  &__block-container {
+    padding: 20px;
+  }
   &__block {
+    margin-top: 20px;
+    background: linear-gradient(
+      122.91deg,
+      #58378f 0%,
+      #35145f 72.07%,
+      #34005c 98.6%
+    );
+    border-radius: 15px;
+    &__cover {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+    &__img {
+      width: 46px;
+    }
+    &__image {
+      width: 24px;
+    }
+    &__text {
+      margin-bottom: 2px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__span {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__envelope {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #2f1d45;
+    }
     &__button {
       width: 138px;
       height: 40px;
