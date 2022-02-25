@@ -21,6 +21,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        width: 100%;
         @media (min-width: 576px) {
             flex-direction: row;
             flex-wrap: wrap;
@@ -33,13 +34,16 @@
         display: flex;
         flex-direction: column;
         @media (min-width: 768px){
-            width: 50%;
+            width: 55%;
         }
     }
     &__steps{
         margin-top: 20px;
         @media (min-width: 768px){
             display: flex;
+        }
+        @media (min-width: 991px){
+            margin-top: 45px;
         }
     }
     &__step{
@@ -50,11 +54,17 @@
         &:last-child .info__step-fon::before{
             display: none;
         }
+        &:last-child{
+            padding-right: 0;
+        }
         @media (min-width: 768px){
             flex-direction: column;
             align-items: flex-start;
             margin-top: 0;
-            margin-right: 26px;
+            padding-right: 26px;
+        }
+        @media (min-width: 991px){
+            padding-right: 126px;
         }
     }
     &__step-fon{
@@ -117,7 +127,7 @@
 
     &__player-wrap{
         @media (min-width: 768px){
-            width: 50%;
+            width: 45%;
             display: flex;
             justify-content: flex-end;
         }
@@ -126,28 +136,44 @@
         margin-top: 22px;
         width: 300px;
         height: 180px;
-
-        img{
+        cursor: pointer;
+        @media (min-width: 991px){
+            width: 350px;
+            height: 240px;
+        }
+        @media (min-width: 1200px){
             width: 100%;
             height: 100%;
+            max-width: 590px;
+            max-height: 330px;
+        }
+
+        video{
+            max-width: 100%;
+            max-height: 100%;
         }
     }
 
     &__pay-btn{
         margin-top: 20px;
+        @media (min-width: 768px){
+            margin-top: 45px;
+        }
     }
 
 
 
     &__lottery{
+        width: 100%;
         display: flex;
         flex-direction: column-reverse;
         @media (min-width: 576px) {
-            align-items: center;
+            margin-top: 60px;
             flex-direction: row;
+            justify-content: space-between
         }
-        @media (min-width: 768px){
-            
+        @media (min-width: 991px){
+            margin-top: 140px;
         }
     }
     &__lottery-img{
@@ -155,6 +181,19 @@
         width: 300px;
         height: 310px;
         object-fit: cover;
+        @media (min-width: 576px){
+            margin-top: 0;
+            margin-right: 15px;
+        }
+        @media (min-width: 991px){
+            width: 400px;
+            height: 390px;
+            margin-right: 85px;
+        }
+        @media (min-width: 1200px){
+            width: 525px;
+            height: 510px;
+        }
         img{
             width: 100%;
             height: 100%;
@@ -167,13 +206,20 @@
         @media (min-width: 576px) {
             align-items:center;
             text-align: center;
-
+            margin-top: 0;
+        }
+        @media (min-width: 991px){
+            flex-grow: 1;
+            align-items: flex-start;
         }
     }
     &__lottery-title{
         max-width: 200px;
         @media (min-width: 768px) {
             max-width: 320px;
+        }
+        @media (min-width: 991px){
+            text-align: left;
         }
     }
     &__lottery-text{
@@ -183,9 +229,18 @@
         line-height: 16.94px;
         color: #D8DBEC;
         max-width: 350px;
-        
+        @media (min-width: 991px){
+            margin-top: 20px;
+            text-align: left;
+            font-size: 16px;
+            line-height: 19.36px;
+            max-width: 495px;
+        }
     }
     &__lottery-btn{
         margin-top: 20px;
+        @media (min-width: 991px){
+            margin-top: 25px;
+        }
     }
 }

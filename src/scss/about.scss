@@ -1,7 +1,7 @@
 
 .about{
     width: 100%;
-    background-image: url('./../img/about-bg.png');
+    background-image: url('./../img/about-svg-bg.svg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -23,7 +23,7 @@
             text-align: center;
         }
         @media (min-width: 991px){
-            max-width: 900px;
+            max-width: 850px;
         }
     }
 
