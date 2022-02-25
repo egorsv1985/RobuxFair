@@ -5,15 +5,30 @@
 
 // base
 @import "./base/normalize";
+
 @import "fonts";
+@import "./base/btn";
+@import "./base/sections";
+@import "./base/tipography";
+
 
 
 
 // components
 
-
+@import "./sections/info";
+@import "./sections/about";
+@import "./sections/statistics";
 
 
 // block
 @import "./blocks/header";
+
+@import "./blocks/attention.scss";
+@import "./blocks/form";
+@import "./blocks/lottery";
+@import "./blocks/pay";
+@import "./blocks/video";
+@import "./blocks/steps";
+
 @import "./blocks/footer";

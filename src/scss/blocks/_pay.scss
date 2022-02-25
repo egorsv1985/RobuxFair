@@ -1,0 +1,22 @@
+.info {
+
+	// .info__pay
+	&__pay {}
+}
+
+.pay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+
+	@media (min-width: 576px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between
+	}
+
+	// .pay__title
+	&__title {}
+}

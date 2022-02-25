@@ -1,0 +1,11 @@
+.title {
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 41.15px;
+	color: #fff;
+
+	@media (min-width: 768px) {
+		font-size: 56px;
+		line-height: 67px;
+	}
+}

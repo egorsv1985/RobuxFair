@@ -10,7 +10,10 @@ export const html = () => {
 				title: "HTML",
 				message: 'Error: <%= error.message %>'
 			})))
-		.pipe(fileinclude())
+		.pipe(fileinclude({
+			prefix: '@@',
+			basepath: '@file'
+		  }))
 		.pipe(pug({
 			// Сжатие HTML файлов
 			pretty: true,
