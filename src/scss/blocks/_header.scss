@@ -1,0 +1,19 @@
+.header {
+	.container {
+		@extend %container;
+	}
+
+	margin: 45px 0 10px;
+	// background:url("@img/water.png") 0 0 no-repeat;
+
+	// .header__wrapper
+	&__wrapper {
+		@include flex (space-between, center);
+	}
+
+	// .header__contacts
+	&__contacts {
+		@include flex (space-between, center);
+		gap: 24px;
+	}
+}
