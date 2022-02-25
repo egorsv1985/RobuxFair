@@ -267,12 +267,37 @@ input:focus::placeholder {
       font-size: 20px;
       line-height: 24px;
     }
+    &__title {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &__cards {
+      background: #352152;
+      border-radius: 15px;
+    }
     &__span {
       font-weight: normal;
       font-size: 14px;
       line-height: 17px;
     }
-
+    &__card {
+      padding: 20px;
+    }
+    &__wrap-btn {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      justify-content: space-between;
+    }
+    &__price {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #6cb9f8;
+    }
     &__envelope {
       display: flex;
       justify-content: space-between;
