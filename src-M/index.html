@@ -9,8 +9,52 @@
 
 <body>
 	<section class="second">
-	
-	
+		<h1 class="second__title title">Купить робуксы</h1>
+		<!-- <div class="second__list__wrap"> -->
+		<!-- <img class="second__list__img" src="./../../img/second/line.svg" alt=""> -->
+		<ul class="second__list">
+			<li class="second__item item__line"><img class="second__item__img" src="./img/1.svg" alt="">
+				<p class="second__text">Создать Game Pass</p>
+			</li>
+			<li class="second__item item__line"><img class="second__item__img" src="./img/2.svg" alt="">
+				<p class="second__text">Выбрать его на сайте</p>
+			</li>
+			<li class="second__item item__line"><img class="second__item__img" src="./img/3.svg" alt="">
+				<p class="second__text">Оплата</p>
+			</li>
+			<li class="second__item"><img class="second__item__img" src="./img/4.svg" alt="">
+				<p class="second__text">Оплата</p>
+			</li>
+		</ul>
+		<!-- </div> -->
+		<form class="second__form">
+			<div class="second__form_RUB"><input class="second__input" type="number" placeholder="Отдаете RUB"></div>
+			<div class="second__form_robux"><input class="second__input" type="number" placeholder="Получаете робуксов"></div>
+			<div class="second__form_name">
+				<input class="second__input second__input--bottom" type="text" name="name" placeholder="Введите ваш никнейм">
+			</div>
+
+		</form>
+		<div class="second__wrap">
+			<h2 class="second__subtitle">Внимание!</h2>
+			<p class="second__description">Пользователь с таким никнеймом не найден!</p>
+		</div>
+
+		<div class="video">
+			<h2 class="video__title title">Как создать?</h2>
+			<div class="c-video">
+				<video class="video" src="./video/robux.mp4" poster="./img/poster.svg"></video>
+				<div class="controls">
+					<div class="orange-bar">
+						<div class="orange-juice"></div>
+					</div>
+					<div class="buttons">
+						<button id="play-pause"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="second__block">
 			<div class="second__block-container">
 				<div class="second__block__envelope">
@@ -133,7 +177,40 @@
 			</div>
 		</div>
 	</section>
-	<script src="js/app.min.js"></script>
+
+	<section class="FAQ">
+		<div class="FAQ__wrap">
+			<h1 class="FAQ__title title">Как купить?</h1>
+			<ul class="second__list FAQ__list">
+				<li class="second__item item__line FAQ__item"><img class="second__item__img" src="./img/1.svg" alt="">
+					<p class="second__text">Создать Game Pass</p>
+				</li>
+				<li class="second__item item__line FAQ__item"><img class="second__item__img" src="./img/2.svg" alt="">
+					<p class="second__text">Выбрать его на сайте</p>
+				</li>
+				<li class="second__item FAQ__item"><img class="second__item__img" src="./img/3.svg" alt="">
+					<p class="second__text">Оплата</p>
+				</li>
+			</ul>
+			<div class="video FAQ__video">
+				<div class="c-video">
+					<video class="video" src="./video/robux.mp4" poster="./img/poster.svg"></video>
+					<div class="controls">
+						<div class="orange-bar">
+							<div class="orange-juice"></div>
+						</div>
+						<div class="buttons">
+							<button id="play-pause"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="FAQ__btn">КУПИТЬ РОБУКСЫ</button>
+		</div>
+
+
+	</section>
+	<script src="./js/video.js"></script>
 
 </body>
 

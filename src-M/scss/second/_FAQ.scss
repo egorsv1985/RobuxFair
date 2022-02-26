@@ -1,0 +1,44 @@
+.FAQ {
+  background-color: #190a29;
+  height: 100%;
+  padding: 40px 20px 450px;
+  @media all and (min-width: 930px) {
+    padding: 40px 50px 450px;
+  }
+  &__btn {
+    max-width: 320px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(91.78deg, #9e00ff 3.77%, #6ac4f8 102.8%);
+    border-radius: 88px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(91.78deg, #b63fff 3.77%, #86ccf5 102.8%);
+    }
+  }
+  &__wrap {
+    max-width: 1200px;
+    @media all and (min-width: 930px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__item:not(:first-child) {
+    @media all and (min-width: 930px) {
+      margin-left: 64px;
+    }
+  }
+  &__video {
+    grid-area: 1/2 / span 3/2;
+    margin-left: 10px;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__list {
+    max-width: 472px;
+  }
+}

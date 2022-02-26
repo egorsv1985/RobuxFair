@@ -1,0 +1,67 @@
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+button{background-color: #fff;}
+/*--------------------*/
+
+
+
+
+
+@import './about.scss';
+@import './info.scss';
+@import './statistics';
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+.container{
+    max-width: 1205px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title{
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 41.15px;
+    color: #fff;
+    @media (min-width: 768px){
+        font-size: 56px;
+        line-height: 67px;
+    }
+}
+
+.painted-btn{
+    background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+    border-radius: 88px;
+    font-size: 16px;
+    line-height: 19.36px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #fff;
+    padding: 16px 60px;
+    text-transform: uppercase;
+    max-width: 320px;
+    white-space: nowrap;
+    &:hover{
+        color: #e6e6e6;
+        background: linear-gradient(91.78deg, #7700c0 3.77%, #4da7db 102.8%);
+    }
+    @media (min-width: 768px){
+        max-width: 264px;
+        padding: 16px 50px;
+    }
+}
