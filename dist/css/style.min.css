@@ -619,9 +619,16 @@ input:focus::placeholder {
 .FAQ__video {
   grid-area: 1/2/span 3/2;
   margin-left: 10px;
+  align-items: center;
 }
 .FAQ__title {
   text-align: left;
+  margin-top: 130px;
+}
+@media all and (min-width: 630px) {
+  .FAQ__title {
+    align-items: center;
+  }
 }
 .FAQ__list {
   max-width: 472px;
@@ -631,10 +638,37 @@ input:focus::placeholder {
 }
 .FAQ__text {
   padding: 0 20px 20px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+@media all and (min-width: 780px) {
+  .FAQ__text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.FAQ__subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
 }
 .FAQ__summary {
   display: flex;
   justify-content: space-between;
+}
+.FAQ__details {
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.FAQ__container {
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 details[open] img {
@@ -648,8 +682,8 @@ details[open] img {
 details > summary {
   list-style-type: none;
   background-color: #160239;
-  margin-top: 10px;
-  padding: 20px 20px 10px;
+  margin-top: 20px;
+  padding: 20px;
 }
 
 summary {
@@ -660,4 +694,65 @@ summary {
 details {
   color: #ffffff;
   background-color: #160239;
+  border-radius: 15px;
+}
+
+.regulations {
+  background: linear-gradient(180deg, #190c25 0%, #16013d 107.3%);
+}
+.regulations__container {
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media all and (min-width: 630px) {
+  .regulations__container {
+    padding: 50px;
+  }
+}
+.regulations__title {
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 68px;
+  margin-bottom: 10px;
+}
+@media all and (min-width: 630px) {
+  .regulations__title {
+    margin-bottom: 15px;
+  }
+}
+.regulations__text, .regulations__text--bottom {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+.regulations__text--bottom {
+  margin: 10px 0 70px;
+}
+@media all and (min-width: 630px) {
+  .regulations__text--bottom {
+    margin: 10px 0 150px;
+  }
+}
+@media all and (min-width: 930px) {
+  .regulations__text--bottom {
+    margin: 10px 0 200px;
+  }
+}
+@media all and (min-width: 110px) {
+  .regulations__text--bottom {
+    margin: 10px 0 378px;
+  }
+}
+.regulations__subtitle {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 30px 0 10px;
+}
+@media all and (min-width: 630px) {
+  .regulations__subtitle {
+    margin: 40px 0 15px;
+  }
 }
