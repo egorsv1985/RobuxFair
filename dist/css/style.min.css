@@ -377,7 +377,7 @@ input:focus::placeholder {
 }
 @media all and (min-width: 1110px) {
   .second__block__cards {
-    max-width: 420px;
+    max-width: 466px;
   }
 }
 @media all and (min-width: 1180px) {
