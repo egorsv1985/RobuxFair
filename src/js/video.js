@@ -12,6 +12,9 @@ function togglePlayPause() {
   }
 }
 
+video.onclick = function () {
+  togglePlayPause();
+};
 btn.onclick = function () {
   togglePlayPause();
 };

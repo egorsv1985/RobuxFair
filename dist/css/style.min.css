@@ -547,9 +547,9 @@ input:focus::placeholder {
   content: "";
   position: absolute;
   background: url(./../img/second/play.svg);
-  top: -172px;
-  right: 50%;
-  width: 16px;
+  top: -26px;
+  right: 4px;
+  width: 21px;
   height: 23px;
 }
 
@@ -574,7 +574,7 @@ input:focus::placeholder {
 
 .orange-juice {
   height: 10px;
-  width: 95px;
+  width: px;
   background-color: #3d1d64;
 }
 
@@ -618,6 +618,13 @@ input:focus::placeholder {
 .FAQ__wrap {
   max-width: 1200px;
 }
+@media all and (min-width: 630px) {
+  .FAQ__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media all and (min-width: 1100px) {
   .FAQ__wrap {
     display: grid;
@@ -639,14 +646,14 @@ input:focus::placeholder {
   text-align: left;
   margin-top: 130px;
 }
-@media all and (min-width: 630px) {
-  .FAQ__title {
-    align-items: center;
-  }
-}
 @media all and (min-width: 1100px) {
   .FAQ__title {
     margin-top: 0;
+  }
+}
+@media all and (min-width: 630px) {
+  .FAQ__title--bottom {
+    text-align: center;
   }
 }
 .FAQ__list {
@@ -661,6 +668,7 @@ input:focus::placeholder {
 @media all and (min-width: 1100px) {
   .FAQ__list {
     position: relative;
+    right: 54px;
     top: -22px;
   }
 }
