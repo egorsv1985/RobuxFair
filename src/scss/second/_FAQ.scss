@@ -1,0 +1,21 @@
+.FAQ {
+  background-color: #190a29;
+  height: 100%;
+  padding: 40px 20px 450px;
+  @media all and (min-width: 630px) {
+    padding: 40px 50px 450px;
+  }
+  &__btn {
+    width: 320px;
+    height: 50px;
+    background: linear-gradient(91.78deg, #9e00ff 3.77%, #6ac4f8 102.8%);
+    border-radius: 88px;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(91.78deg, #b63fff 3.77%, #86ccf5 102.8%);
+    }
+  }
+}
