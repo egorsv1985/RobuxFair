@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -187,6 +186,7 @@ ul {
 }
 .second__form {
   padding-top: 10px;
+  position: relative;
 }
 @media all and (min-width: 630px) {
   .second__form {
@@ -230,7 +230,7 @@ ul {
 .second__form_RUB::after {
   content: "";
   position: absolute;
-  background: url("./../img/second/₽.svg") 0 0 no-repeat;
+  background: url("./../img/second/ruble.svg") 0 0 no-repeat;
   width: 22px;
   height: 22px;
   top: 12px;
@@ -452,5 +452,24 @@ input:focus::placeholder {
 @media all and (min-width: 780px) {
   .second__card-none {
     display: block;
+  }
+}
+
+.second__form_name {
+  position: relative;
+}
+.second__form_name::after {
+  content: "";
+  position: absolute;
+  background: url("./../img/second/Search.svg") 0 0 no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 16px;
+  right: 18px;
+  display: block;
+}
+@media all and (min-width: 930px) {
+  .second__form_name::after {
+    right: -382px;
   }
 }

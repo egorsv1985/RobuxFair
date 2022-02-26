@@ -140,6 +140,8 @@
   }
   &__form {
     padding-top: 10px;
+    position: relative;
+
     @media all and (min-width: 630px) {
       padding-top: 106px;
       padding-bottom: 30px;
@@ -171,12 +173,13 @@
       width: 388px;
     }
   }
+
   &__form_RUB {
     position: relative;
     &::after {
       content: "";
       position: absolute;
-      background: url("./../img/second/₽.svg") 0 0 no-repeat;
+      background: url("./../img/second/ruble.svg") 0 0 no-repeat;
       width: 22px;
       height: 22px;
       top: 12px;
@@ -386,6 +389,22 @@ input:focus::placeholder {
     display: none;
     @media all and (min-width: 780px) {
       display: block;
+    }
+  }
+}
+.second__form_name {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("./../img/second/Search.svg") 0 0 no-repeat;
+    width: 22px;
+    height: 22px;
+    top: 16px;
+    right: 18px;
+    display: block;
+    @media all and (min-width: 930px) {
+      right: -382px;
     }
   }
 }
