@@ -305,8 +305,29 @@ input:focus::placeholder {
       border-radius: 15px;
       @media all and (min-width: 780px) {
         margin-bottom: 20px;
-        max-width: 364px;
+        max-width: 770px;
         width: 100%;
+      }
+      @media all and (min-width: 926px) {
+        max-width: 364px;
+        &:not(:nth-child(2n)) {
+          margin-right: 20px;
+        }
+      }
+      @media all and (min-width: 1110px) {
+        max-width: 420px;
+      }
+      @media all and (min-width: 1180px) {
+        max-width: 480px;
+      }
+      @media all and (min-width: 1300px) {
+        max-width: 364px;
+        &:not(:nth-child(2n)) {
+          margin-right: 0;
+        }
+        &:not(:nth-child(3n)) {
+          margin-right: 20px;
+        }
       }
     }
 
