@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  background: #ccc;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.video {
+  width: 100%;
+}
+
+.c-video {
+  width: 100%;
+  max-width: 590px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.c-video:hover .controls {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(100%) translateY(-5px);
+  -webkit-transform: translateY(100%) translateY(-5px);
+  -moz-transform: translateY(100%) translateY(-5px);
+  -ms-transform: translateY(100%) translateY(-5px);
+  -o-transform: translateY(100%) translateY(-5px);
+  transition: all 0.2s;
+}
+
+.buttons button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 90deg;
+  background: #000000;
+}
+
+.buttons button:before {
+  content: "";
+  position: absolute;
+  background: url(./../img/second/play.svg);
+  top: -172px;
+  right: 50%;
+  width: 16px;
+  height: 23px;
+}
+
+.buttons button.play:before {
+  content: "";
+  background: url(./../img/second/play.svg);
+}
+.buttons button.pause:before {
+  content: "";
+  background: url(./pause.png);
+  width: 23px;
+}
+
+.orange-bar {
+  height: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: black;
+}
+
+.orange-juice {
+  height: 10px;
+  width: 100px;
+  background-color: orangered;
+}
