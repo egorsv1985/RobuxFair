@@ -588,6 +588,19 @@ input:focus::placeholder {
     padding: 40px 50px 450px;
   }
 }
+.FAQ__span {
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  margin-left: 10px;
+}
+@media all and (min-width: 630px) {
+  .FAQ__span {
+    margin-left: 0;
+    max-width: 74px;
+    margin-top: 16px;
+  }
+}
 .FAQ__btn {
   max-width: 320px;
   width: 100%;
@@ -605,10 +618,11 @@ input:focus::placeholder {
 .FAQ__wrap {
   max-width: 1200px;
 }
-@media all and (min-width: 930px) {
+@media all and (min-width: 1100px) {
   .FAQ__wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
   }
 }
 @media all and (min-width: 930px) {
@@ -630,8 +644,25 @@ input:focus::placeholder {
     align-items: center;
   }
 }
+@media all and (min-width: 1100px) {
+  .FAQ__title {
+    margin-top: 0;
+  }
+}
 .FAQ__list {
   max-width: 472px;
+  width: 100%;
+}
+@media all and (min-width: 930px) {
+  .FAQ__list {
+    width: 472px;
+  }
+}
+@media all and (min-width: 1100px) {
+  .FAQ__list {
+    position: relative;
+    top: -22px;
+  }
 }
 .FAQ__subtitle, .FAQ__text {
   color: #ffffff;
@@ -678,6 +709,7 @@ input:focus::placeholder {
 @media all and (min-width: 630px) {
   .FAQ__item {
     justify-content: center;
+    display: block;
   }
 }
 @media all and (min-width: 630px) {
