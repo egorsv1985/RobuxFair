@@ -145,16 +145,19 @@ ul {
   flex-direction: column;
   align-items: center;
   position: relative;
+  margin-bottom: 20px;
 }
 @media all and (min-width: 630px) {
   .second__wrap {
     margin: 0 auto;
     max-width: 400px;
+    margin-bottom: 50px;
   }
 }
 @media all and (min-width: 930px) {
   .second__wrap {
     max-width: 794px;
+    margin-bottom: 100px;
   }
 }
 .second__wrap::after {
@@ -295,6 +298,13 @@ input:focus::placeholder {
 .second__block-wrap {
   display: flex;
 }
+@media all and (min-width: 780px) {
+  .second__cards-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .second__block-cover {
   display: flex;
   align-items: center;
@@ -304,13 +314,28 @@ input:focus::placeholder {
 }
 .second__block {
   margin-top: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
   background: linear-gradient(122.91deg, #58378f 0%, #35145f 72.07%, #34005c 98.6%);
   border-radius: 15px;
 }
-.second__block__cover {
+.second__block__cover, .second__block__cover-card {
   display: flex;
   flex-direction: column;
   margin-left: 20px;
+}
+.second__block__cover-card {
+  position: relative;
+}
+.second__block__cover-card::after {
+  content: "";
+  position: absolute;
+  background: url("./../img/second/icon.svg") 0 0 no-repeat;
+  width: 22px;
+  height: 22px;
+  top: 26px;
+  left: -4px;
+  display: block;
 }
 .second__block__img {
   width: 46px;
@@ -335,13 +360,31 @@ input:focus::placeholder {
   background: #352152;
   border-radius: 15px;
 }
-.second__block__span {
+@media all and (min-width: 780px) {
+  .second__block__cards {
+    margin-bottom: 20px;
+    max-width: 364px;
+    width: 100%;
+  }
+}
+.second__block__span, .second__block__span-card {
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
 }
+.second__block__span-card {
+  position: relative;
+  left: 14px;
+}
 .second__block__card {
   padding: 20px;
+  margin-bottom: 20px;
+}
+@media all and (min-width: 780px) {
+  .second__block__card {
+    width: 100%;
+    margin-right: 20px;
+  }
 }
 .second__block__wrap-btn {
   display: flex;
@@ -373,4 +416,12 @@ input:focus::placeholder {
 .second__block__button:hover {
   cursor: pointer;
   background: linear-gradient(91.78deg, #b63fff 3.77%, #86ccf5 102.8%);
+}
+.second__card-none {
+  display: none;
+}
+@media all and (min-width: 780px) {
+  .second__card-none {
+    display: block;
+  }
 }
