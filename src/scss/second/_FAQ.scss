@@ -41,4 +41,40 @@
   &__list {
     max-width: 472px;
   }
+  &__subtitle,
+  &__text {
+    color: #ffffff;
+  }
+  &__text {
+    padding: 0 20px 20px;
+  }
+  &__summary {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+details[open] {
+  img {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+  }
+}
+
+details > summary {
+  list-style-type: none;
+  background-color: #160239;
+  margin-top: 10px;
+  padding: 20px 20px 10px;
+}
+summary {
+  color: #ffffff;
+  border-radius: 15px;
+}
+
+details {
+  color: #ffffff;
+  background-color: #160239;
 }
