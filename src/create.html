@@ -7,7 +7,14 @@
 <body>
 	@@include('html/header.html', {})
 
-	
+	<section class="create">
+		@@include('html/blocks/pay.html', {
+		"h2": "Купить робуксы"
+		})
+	@@include('html/blocks/form.html', {})
+	@@include('html/blocks/users.html', {})
+
+	</section>
 
 	@@include('html/footer.html', {})
 	<script src="js/app.min.js"></script>
