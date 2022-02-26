@@ -1,58 +1,68 @@
-const ctx = document.getElementById('graph_activation');
-const myChart = new Chart(ctx, {
-	type: 'bar',
-	data: {
-		labels: ['Jun', 'Dec', 'Nov', 'Oct', 'Sep', 'Aug'],
-		datasets: [
-			/* Параметры первой таблицы для IOS*/
-			{
-				label: '',
-				data: [11, 11, 11, 11, 11, 11],
-				backgroundColor: [
-					'#0073FF',
-				],
-				borderColor: [
-					'#0073FF',
-				],
-				borderWidth: 1
-			},
-			/* Параметры первой таблицы для Android*/
-			{
-				label: '',
-				data: [7, 7, 7, 7, 7, 7],
-				backgroundColor: [
-					'#009E8B',
-				],
-				borderColor: [
-					'#009E8B',
-				],
-				borderWidth: 1,
 
-			},
-
-		],
-
-	},
-});
-
-
-let ctx2 = document.getElementById('graph_retention');
-let chart = new Chart(ctx2, {
-	type: 'line',
-	data: {
-		labels: ['1m', '2m', '4m', '6m', '8m', '10m', '12m'],
-		datasets: [{ // График зелёного цвета
-				label: 'График 1',
-				backgroundColor: 'transparent',
-				borderColor: 'green',
-				data: [70, 60, 60, 50, 40, 30, 20],
-			},
-			{ // График синего цвета
-				label: 'График 2',
-				// backgroundColor: 'transparent',
-				borderColor: 'blue',
-				data: [90, 80, 80, 70, 60, 50, 40]
+// Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
+export let bodyLockStatus = true;
+export let bodyLockToggle = (delay = 500) => {
+	if (document.documentElement.classList.contains('lock')) {
+		bodyUnlock(delay);
+	} else {
+		bodyLock(delay);
+	}
+}
+export let bodyUnlock = (delay = 500) => {
+	let body = document.querySelector("body");
+	if (bodyLockStatus) {
+		let lock_padding = document.querySelectorAll("[data-lp]");
+		setTimeout(() => {
+			for (let index = 0; index < lock_padding.length; index++) {
+				const el = lock_padding[index];
+				el.style.paddingRight = '0px';
 			}
-		],
-	},
-});
+			body.style.paddingRight = '0px';
+			document.documentElement.classList.remove("lock");
+		}, delay);
+		bodyLockStatus = false;
+		setTimeout(function () {
+			bodyLockStatus = true;
+		}, delay);
+	}
+}
+export let bodyLock = (delay = 500) => {
+	let body = document.querySelector("body");
+	if (bodyLockStatus) {
+		let lock_padding = document.querySelectorAll("[data-lp]");
+		for (let index = 0; index < lock_padding.length; index++) {
+			const el = lock_padding[index];
+			el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		}
+		body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+		document.documentElement.classList.add("lock");
+
+		bodyLockStatus = false;
+		setTimeout(function () {
+			bodyLockStatus = true;
+		}, delay);
+	}
+}
+
+// Модуль работы с меню (бургер) =======================================================================================================================================================================================================================
+export function menuInit() {
+	let iconMenu = document.querySelector(".icon-menu");
+	if (iconMenu) {
+		iconMenu.addEventListener("click", function (e) {
+			if (bodyLockStatus) {
+				bodyLockToggle();
+				document.documentElement.classList.toggle("menu-open");
+			}
+		});
+	};
+}
+export function menuOpen() {
+	bodyLock();
+	document.documentElement.classList.add("menu-open");
+}
+export function menuClose() {
+	bodyUnlock();
+	document.documentElement.classList.remove("menu-open");
+}
+
+menuInit();

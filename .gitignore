@@ -27,6 +27,7 @@ temp
 temp-*
 node_modules
 build
+dist
 # Other
 npm-debug.log
 .idea

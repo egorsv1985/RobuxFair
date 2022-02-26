@@ -16,7 +16,7 @@ export const path = {
 	},
 	src: {
 		js: `${srcFolder}/js/app.js`, // Можно переименовать main.js
-		images: `${srcFolder}/img/**/*.{jpg, jpeg, ico, png, gif, webp}`,
+		images: `${srcFolder}/img/**/*.{jpg,jpeg,ico,png,gif,webp}`,
 		svg: `${srcFolder}/img/**/*.svg`,
 		scss: `${srcFolder}/scss/style.scss`,
 		html: `${srcFolder}/*.html`,
@@ -25,7 +25,7 @@ export const path = {
 	},
 	watch: {
 		js: `${srcFolder}/js/**/*.js`,
-		images: `${srcFolder}/img/**/*.{ipg, jpeg, ico, svg, png, gif, webp}`,
+		images: `${srcFolder}/img/**/*.{ipg,jpeg,ico,svg,png,gif,webp}`,
 		scss: `${srcFolder}/scss/**/*.scss`,
 		html: `${srcFolder}/**/*.html`,
 		files: `${srcFolder}/files/**/*.*`
@@ -34,5 +34,5 @@ export const path = {
 	buildFolder: buildFolder,
 	srcFolder: srcFolder,
 	rootFolder: rootFolder,
-	ftp: ''
+	ftp: 'test'
 }
