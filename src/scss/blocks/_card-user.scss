@@ -1,0 +1,130 @@
+.card-user {
+
+	padding: 20px;
+	background: #352152;
+	border-radius: 15px;
+	margin-bottom: 20px;
+
+	// .card-user__wraper
+	&__wraper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	// .card-user__wrap
+	&__wrap {
+		display: flex;
+		gap: 10px;
+
+	}
+
+	// card-user__block-img
+	.card-user__block-img {
+
+		width: 50px;
+		height: 45.55px;
+		background: #11032E;
+		border-radius: 5px;
+
+		display: flex;
+		justify-content: center;
+
+	}
+
+	// .card-user__img
+	&__img {
+		width: 45px;
+		height: 45px;
+	}
+
+	// .card-user__inner
+	&__inner {}
+
+	// .card-user__text
+	&__text {
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+
+		color: $textColorTitle;
+
+
+	}
+
+	// .card-user__counter
+	&__counter {
+
+		position: relative;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
+		color: $textColorSubtitle;
+		padding-left: 15px;
+		margin-top: 5px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background: url("./../img/card/robux.svg") 0 0 no-repeat;
+			width: 16px;
+			height: 16px;
+			top: 0;
+			left: -4px;
+			display: block;
+		}
+
+	}
+
+	// .card-user__btns
+	&__btns {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+
+
+	}
+
+	// .card-user__price
+	&__price {
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+
+		color: #6CB9F8;
+
+
+	}
+
+	// .card-user__link
+	&__link {
+
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		letter-spacing: 0.05em;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		color: $textColorBtn;
+		width: 150px;
+		height: 40px;
+		background: linear-gradient(91.78deg, #9e00ff 3.77%, #6ac4f8 102.8%);
+		border-radius: 88px;
+		border: none;
+
+
+		&:hover {
+
+			background: linear-gradient(91.78deg, #b63fff 3.77%, #86ccf5 102.8%);
+		}
+
+
+	}
+}

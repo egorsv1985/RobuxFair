@@ -1,0 +1,82 @@
+.card {
+	padding: 20px;
+
+	background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
+	border-radius: 15px;
+
+	// .card__wrapper
+	&__wrapper {}
+
+	// .card__envelope
+	&__envelope {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #2F1D45;
+
+	}
+
+	// .card__wrap
+	&__wrap {}
+
+	// .card__cover
+	&__cover {
+		display: flex;
+		gap: 15px;
+	}
+
+	// .card__img-block
+	&__img-block {
+
+		width: 50px;
+		height: 46.48px;
+
+
+		background: #11032E;
+		border-radius: 5px;
+
+	}
+
+	// .card__img
+	&__img {}
+
+	// .card__inner
+	&__inner {}
+
+	// .card__name
+	&__name {
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+
+		color: $textColor;
+
+
+	}
+
+	// .card__mail
+	&__mail {}
+
+	// .card__link-back
+	&__link-back {
+		background: url("./../img/card/back.svg") 0 0 no-repeat;
+		width: 25px;
+		height: 15px;
+		display: block;
+
+	}
+
+	// .card__title
+	&__title {
+
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+
+		color: $textColorTitle;
+		margin: 20px 0;
+
+
+	}
+}
