@@ -12,4 +12,144 @@
 		width: 50%;
 	}
 
+	@media (min-width: 768px) {
+		justify-content: center;
+		width: 100%;
+	}
+
+	@media (min-width: 1439px) {
+
+		width: 50%;
+	}
+
+	// .pay__steps
+	&__steps {
+		margin: 10px 0 15px;
+		position: relative;
+		width: 100%;
+
+		@media (min-width: 768px) {
+			display: flex;
+			width: 100%;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@media (min-width: 991px) {
+			margin-top: 45px;
+		}
+
+		&::before {
+			position: absolute;
+			content: "";
+			width: 4px;
+			height: 85%;
+			bottom: 0;
+			left: 15px;
+			background-color: #2F1D45;
+			z-index: -1;
+
+			@media (min-width: 768px) {
+				width: 80%;
+				height: 8px;
+				bottom: 85px;
+				left: 65px;
+			}
+		}
+
+	}
+
+	// .pay__step
+	&__step {
+		display: flex;
+		align-items: center;
+		margin-top: 15px;
+
+
+		&:last-child .pay__step-fon::before {
+			display: none;
+		}
+
+		&:last-child {
+			padding-right: 0;
+			display: none;
+
+		}
+
+		&:nth-child(3) .pay__step-fon::before {
+
+			display: none;
+		}
+
+		&:nth-child(2) {
+			align-items: center;
+		}
+
+		&:nth-child(3) {
+			align-items: flex-end;
+
+		}
+
+		@media (min-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: 0;
+			width: 30%;
+
+		}
+
+	}
+
+	// .pay__step-fon
+	&__step-fon {
+		background-color: #2F1D45;
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media (min-width: 768px) {
+			width: 66px;
+			height: 66px;
+		}
+
+
+	}
+
+	// .pay__step-number
+	&__step-number {
+		display: block;
+		font-size: 24px;
+		line-height: 29px;
+		font-weight: 700;
+		background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		@media (min-width: 768px) {
+			font-size: 46px;
+			line-height: 56px;
+		}
+	}
+
+	// .pay__step-text
+	&__step-text {
+		display: block;
+		margin-left: 11px;
+		font-size: 14px;
+		line-height: 16.94px;
+		font-weight: 400;
+		color: #fff;
+
+		@media (min-width: 768px) {
+			font-size: 16px;
+			line-height: 19.36px;
+			max-width: 105px;
+			margin-left: 0;
+			margin-top: 16px;
+			min-height: 40px;
+		}
+	}
 }

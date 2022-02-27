@@ -5,6 +5,7 @@
     background-position: center center;
     background-size: cover;
     position: relative;
+    padding-bottom: 100px;
     // &::after{
     //     content: "";
     //     position: absolute;
@@ -20,8 +21,7 @@
 
 
     &__inner {
-        padding-top: 100px;
-        padding-bottom: 100px;
+
         display: flex;
         flex-direction: column;
         justify-content: center;

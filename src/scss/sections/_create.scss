@@ -1,4 +1,24 @@
 .create {
+	padding: 20px 0 70px;
+
+	.pay {
+		width: 100%;
+	}
+
+	// .pay__steps
+	.pay__steps {
+
+
+		&::before {
+
+
+			@media (min-width: 768px) {
+				width: 90%;
+
+			}
+		}
+
+	}
 
 	// .pay__step
 	.pay__step {
@@ -8,12 +28,26 @@
 			display: none;
 		}
 
+
+		&:nth-child(3) {
+			@media (min-width: 768px) {
+				align-items: center;
+			}
+
+
+		}
+
 		&:last-child {
 			padding-right: 0;
 			display: flex;
 			align-items: center;
 			margin-top: 15px;
 			position: relative;
+
+			@media (min-width: 768px) {
+				margin-top: 0;
+				align-items: flex-end;
+			}
 		}
 
 		&:nth-child(3) .pay__step-fon::before {
@@ -21,16 +55,7 @@
 			display: block;
 		}
 
-		@media (min-width: 768px) {
-			flex-direction: column;
-			align-items: flex-start;
-			margin-top: 0;
-			padding-right: 26px;
-		}
 
-		@media (min-width: 991px) {
-			padding-right: 126px;
-		}
 
 	}
 

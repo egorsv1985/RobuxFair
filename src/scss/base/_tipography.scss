@@ -4,7 +4,7 @@
 	line-height: 41.15px;
 	color: $textColorTitle;
 
-	@media (min-width: 768px) {
+	@media (min-width: 991px) {
 		font-size: 56px;
 		line-height: 67px;
 	}
@@ -16,7 +16,7 @@
 	line-height: 16.94px;
 	color: $textColorSubtitle;
 
-	@media (min-width: 768px) {
+	@media (min-width: 991px) {
 		font-size: 16px;
 		line-height: 19px;
 		margin-top: 20px;
