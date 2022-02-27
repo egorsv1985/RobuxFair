@@ -1,0 +1,40 @@
+.create {
+
+	// .pay__step
+	.pay__step {
+
+
+		&:last-child .pay__step-fon::before {
+			display: none;
+		}
+
+		&:last-child {
+			padding-right: 0;
+			display: flex;
+			align-items: center;
+			margin-top: 15px;
+			position: relative;
+		}
+
+		&:nth-child(3) .pay__step-fon::before {
+
+			display: block;
+		}
+
+		@media (min-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			margin-top: 0;
+			padding-right: 26px;
+		}
+
+		@media (min-width: 991px) {
+			padding-right: 126px;
+		}
+
+	}
+
+	.painted-btn {
+		display: none;
+	}
+}

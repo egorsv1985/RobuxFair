@@ -30,6 +30,7 @@
 	}
 
 	.wave-top {
+		display: none;
 		position: absolute;
 		top: -108px;
 		left: 0;
@@ -58,6 +59,7 @@
 		}
 
 		svg {
+			display: none;
 			height: 111px;
 			object-fit: cover;
 
@@ -84,11 +86,13 @@
 			}
 
 			path {
+				display: none;
 				object-fit: cover;
 				fill: #190C25;
 			}
 		}
 	}
+
 
 	.wave-bootom {
 		display: none;

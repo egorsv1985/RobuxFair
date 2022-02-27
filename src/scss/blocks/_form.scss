@@ -1,78 +1,79 @@
-.second {
+.form {
+	padding-top: 10px;
 
-	// .second__form
-	&__form {
-		padding-top: 10px;
+	@media all and (min-width: 630px) {
+		padding-top: 106px;
+		padding-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	@media all and (min-width: 930px) {
+		flex-wrap: wrap;
+		flex-direction: row;
+		max-width: 794px;
+		margin: 0 auto;
+		justify-content: space-between;
+	}
+
+	&__RUB,
+	&__robux,
+	&__name {
+		margin-bottom: 20px;
+		height: 50px;
+		max-width: 323px;
+		width: 100%;
 
 		@media all and (min-width: 630px) {
-			padding-top: 106px;
-			padding-bottom: 30px;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			align-items: center;
+			max-width: 460px;
+			height: 60px;
 		}
 
 		@media all and (min-width: 930px) {
-			flex-wrap: wrap;
-			flex-direction: row;
-			max-width: 794px;
-			margin: 0 auto;
-			justify-content: space-between;
-		}
-
-		&_RUB,
-		&_robux,
-		&_name {
-			margin-bottom: 20px;
-			height: 50px;
-			max-width: 323px;
-			width: 100%;
-
-			@media all and (min-width: 630px) {
-				max-width: 460px;
-				height: 60px;
-			}
-
-			@media all and (min-width: 930px) {
-				width: 388px;
-			}
-		}
-
-		// .second__form_RUB
-		&_RUB {
-			position: relative;
-
-			&::after {
-				content: "";
-				position: absolute;
-				background: url("./../img/second/₽.svg") 0 0 no-repeat;
-				width: 22px;
-				height: 22px;
-				top: 12px;
-				right: 6px;
-				display: block;
-			}
-		}
-
-		// .second__form_robux
-		&_robux {
-			position: relative;
-
-			&::after {
-				content: "";
-				position: absolute;
-				background: url("./../img/second/robux.svg") 0 0 no-repeat;
-				width: 22px;
-				height: 22px;
-				top: 12px;
-				right: 6px;
-				display: block;
-			}
+			width: 388px;
 		}
 	}
 
-	// .second__input
+	// .form__RUB
+	&__RUB {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background: url("./../img/second/₽.svg") 0 0 no-repeat;
+			width: 22px;
+			height: 22px;
+			top: 12px;
+			right: 6px;
+			display: block;
+		}
+	}
+
+	// .form__input
+	&__input {}
+
+	// .form__robux
+	&__robux {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background: url("./../img/second/robux.svg") 0 0 no-repeat;
+			width: 22px;
+			height: 22px;
+			top: 12px;
+			right: 6px;
+			display: block;
+		}
+	}
+
+	// .form__input--bottom
+	&__input--bottom {}
+
 	input {
 		padding: 10px 0;
 	}
@@ -81,7 +82,4 @@
 		transform: translateY(-15px);
 		font-size: 10px;
 	}
-
-	// .second__input--bottom
-	&__input--bottom {}
 }
