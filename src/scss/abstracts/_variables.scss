@@ -1,23 +1,10 @@
 // Colors
 
-$textColor: #1E4D51;
-$bgColor: #2F1D45;
-$bgColorBtn: #1E4D51;
-$textColorBtn: #E4B0A2;
-
-
-
-$breakpoints: (xs: 576px,
-	sm: 768px,
-);
-
-%container {
-	max-width: 390px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 24px;
-
-	@include media (xs) {
-		padding: 0 24px;
-	}
-}
+$textColor: #D8DBEC;
+$textColorTitle: #fff;
+$textColorSubtitle: #D8DBEC;
+;
+$bgColor: #190A29;
+$bgColorFooter: #170337;
+$bgColorBtn: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+$textColorBtn: #fff;

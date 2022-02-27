@@ -1,11 +1,12 @@
 .painted-btn {
-	background: linear-gradient(91.78deg, #9E00FF 3.77%, #6AC4F8 102.8%);
+	background: $bgColorBtn;
 	border-radius: 88px;
 	font-size: 16px;
 	line-height: 19.36px;
 	font-weight: 700;
 	letter-spacing: 0.8px;
-	color: #fff;
+	color: $textColorBtn;
+	@include flex (center, center);
 	padding: 16px 60px;
 	text-transform: uppercase;
 	max-width: 320px;

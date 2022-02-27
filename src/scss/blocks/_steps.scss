@@ -2,7 +2,7 @@
 
 	// .pay__steps
 	&__steps {
-		margin-top: 20px;
+		margin: 10px 0 15px;
 
 		@media (min-width: 768px) {
 			display: flex;
@@ -11,6 +11,7 @@
 		@media (min-width: 991px) {
 			margin-top: 45px;
 		}
+
 	}
 
 	// .pay__step
@@ -20,12 +21,18 @@
 		margin-top: 15px;
 		position: relative;
 
-		&:last-child .info__step-fon::before {
+		&:last-child .pay__step-fon::before {
 			display: none;
 		}
 
 		&:last-child {
 			padding-right: 0;
+			display: none;
+		}
+
+		&:nth-child(3) .pay__step-fon::before {
+
+			display: none;
 		}
 
 		@media (min-width: 768px) {
