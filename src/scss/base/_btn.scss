@@ -17,3 +17,19 @@
 		padding: 16px 50px;
 	}
 }
+
+.info__pay .painted-btn {
+	display: none;
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+}
+
+.info__btn {
+	display: block;
+
+	@media (min-width: 768px) {
+		display: none;
+	}
+}

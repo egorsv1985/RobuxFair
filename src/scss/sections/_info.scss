@@ -1,11 +1,26 @@
 .info {
 	width: 100%;
 	position: relative;
-	padding-bottom: 95px;
+
+	// background: url("./../img/info/frame1.png") 50% 20% no-repeat;
+	// url("./../img/info/frame2.png") 200px 150px no-repeat,
+	// url("./../img/info/frame3.png") 500px 250px no-repeat,
+	// url("./../img/info/frame4.png") 400px 350px no-repeat,
+	// url("./../img/info/frame5.png") 800px 450px no-repeat;
+
+
+	// background-size: cover;
+	&__svg {
+		position: absolute;
+		bottom: -280px;
+		left: 0;
+		z-index: -10;
+	}
+
+	@media (min-width: 1023px) {}
 
 	&__inner {
-		padding-top: 100px;
-		padding-bottom: 100px;
+
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

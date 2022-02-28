@@ -1,0 +1,19 @@
+.faq {
+	background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
+	position: relative;
+	top: -68px;
+
+
+	&__wrapper {
+		background: url("./../img/faq/faq-bg.png");
+		background-size: cover;
+
+		padding: 110px 0 260px;
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+		gap: 138px;
+	}
+}

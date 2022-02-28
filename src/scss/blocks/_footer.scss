@@ -36,6 +36,10 @@
 	.menu__button {
 
 		background: url("./../img/footer/border-bottom.svg") center no-repeat;
+
+		@media (min-width:860px) {
+			background: url("./../img/footer/border-button.svg") center no-repeat;
+		}
 	}
 
 	// .footer__item

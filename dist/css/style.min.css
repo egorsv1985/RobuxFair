@@ -418,8 +418,26 @@ template {
   }
 }
 
+.info__pay .painted-btn {
+  display: none;
+}
+@media (min-width: 768px) {
+  .info__pay .painted-btn {
+    display: block;
+  }
+}
+
+.info__btn {
+  display: block;
+}
+@media (min-width: 768px) {
+  .info__btn {
+    display: none;
+  }
+}
+
 .container {
-  max-width: 1205px;
+  max-width: 1235px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -467,11 +485,14 @@ template {
 .info {
   width: 100%;
   position: relative;
-  padding-bottom: 95px;
+}
+.info__svg {
+  position: absolute;
+  bottom: -280px;
+  left: 0;
+  z-index: -10;
 }
 .info__inner {
-  padding-top: 100px;
-  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -621,12 +642,22 @@ template {
   width: 100%;
   background: url("./../img/about/about-bg.png") center no-repeat;
   background-size: cover;
-  padding: 100px 0;
+  height: 100vh;
+  position: relative;
+  top: -68px;
+}
+@media (min-width: 1023px) {
+  .about {
+    background: url("./../img/about/about-bg-big.png") center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
 }
 .about__inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 105px;
 }
 @media (min-width: 576px) {
   .about__inner {
@@ -643,7 +674,8 @@ template {
 }
 @media (min-width: 991px) {
   .about__title {
-    max-width: 850px;
+    font-size: 66px;
+    line-height: 80px;
   }
 }
 .about__subtitle {
@@ -663,11 +695,24 @@ template {
 .about__btn {
   margin-top: 26px;
 }
+.about .about__svg {
+  width: 100vw;
+}
+.about .about__svg svg {
+  width: 100%;
+  height: 100%;
+}
 
 .statistics {
   width: 100%;
   background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
   position: relative;
+  z-index: -11;
+}
+@media (min-width: 991px) {
+  .statistics {
+    padding: 210px 0 50px;
+  }
 }
 .statistics__inner {
   padding: 70px 0;
@@ -725,6 +770,11 @@ template {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
+  }
+}
+@media (min-width: 991px) {
+  .statistics__list {
+    max-width: 100%;
   }
 }
 .statistics__list-item {
@@ -792,8 +842,19 @@ template {
   width: 100%;
 }
 @media (min-width: 768px) {
+  .create .pay {
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
   .create .pay__steps::before {
-    width: 90%;
+    width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  .create .pay__steps::before {
+    width: 75%;
+    left: 130px;
   }
 }
 .create .pay__step:last-child .pay__step-fon::before {
@@ -814,7 +875,6 @@ template {
 @media (min-width: 768px) {
   .create .pay__step:last-child {
     margin-top: 0;
-    align-items: flex-end;
   }
 }
 .create .pay__step:nth-child(3) .pay__step-fon::before {
@@ -822,6 +882,29 @@ template {
 }
 .create .painted-btn {
   display: none;
+}
+
+.faq {
+  background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
+  position: relative;
+  top: -68px;
+}
+.faq__wrapper {
+  background: url("./../img/faq/faq-bg.png");
+  background-size: cover;
+  padding: 110px 0 260px;
+}
+.faq__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 138px;
+}
+
+.pay1 {
+  padding-bottom: 110px;
+}
+.pay1__title {
+  text-align: center;
 }
 
 .logo img {
@@ -909,6 +992,7 @@ template {
   line-height: 15px;
   letter-spacing: 0.05em;
   text-align: center;
+  min-width: 186px;
   width: 100%;
   padding: 15px 32px;
   white-space: nowrap;
@@ -985,6 +1069,7 @@ template {
 @media all and (min-width: 930px) {
   .attention {
     max-width: 794px;
+    margin-bottom: 50px;
   }
 }
 .attention::after {
@@ -1044,6 +1129,7 @@ template {
     max-width: 794px;
     margin: 0 auto;
     justify-content: space-between;
+    margin-top: 55px;
   }
 }
 .form__RUB, .form__robux, .form__name {
@@ -1186,6 +1272,7 @@ template {
   .lottery__content {
     flex-grow: 1;
     align-items: flex-start;
+    justify-content: center;
   }
 }
 .lottery__title {
@@ -1209,6 +1296,7 @@ template {
   .lottery__text {
     margin-top: 20px;
     max-width: 495px;
+    text-align: left;
   }
 }
 .lottery__btn {
@@ -1243,6 +1331,7 @@ template {
 }
 @media (min-width: 1439px) {
   .pay {
+    justify-content: flex-start;
     width: 50%;
   }
 }
@@ -1256,7 +1345,7 @@ template {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 @media (min-width: 991px) {
@@ -1274,12 +1363,20 @@ template {
   background-color: #2F1D45;
   z-index: -1;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .pay__steps::before {
-    width: 80%;
+    width: 85%;
     height: 8px;
     bottom: 85px;
     left: 65px;
+  }
+}
+@media (min-width: 768px) {
+  .pay__steps::before {
+    width: 75%;
+    height: 8px;
+    bottom: 85px;
+    left: 95px;
   }
 }
 .pay__step {
@@ -1301,14 +1398,18 @@ template {
   align-items: center;
 }
 .pay__step:nth-child(3) {
-  align-items: flex-end;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .pay__step {
     flex-direction: column;
-    align-items: flex-start;
     margin-top: 0;
-    width: 30%;
+    width: 25%;
+  }
+}
+@media (min-width: 1000px) {
+  .pay__step {
+    width: 25%;
   }
 }
 .pay__step-fon {
@@ -1348,12 +1449,12 @@ template {
   line-height: 16.94px;
   font-weight: 400;
   color: #fff;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .pay__step-text {
     font-size: 16px;
     line-height: 19.36px;
-    max-width: 105px;
     margin-left: 0;
     margin-top: 16px;
     min-height: 40px;
@@ -1361,43 +1462,91 @@ template {
 }
 
 .video {
-  margin: 20px 0;
+  width: 100%;
+}
+
+.c-video {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
-  .video {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-  }
-}
-@media (min-width: 1439px) {
-  .video {
+  .c-video {
     width: 50%;
+    margin: 0 auto;
   }
 }
+
 .video__player {
-  width: 300px;
-  height: 180px;
+  width: 100%;
+}
+
+.c-video:hover .controls {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(100%) translateY(-5px);
+  -webkit-transform: translateY(100%) translateY(-5px);
+  -moz-transform: translateY(100%) translateY(-5px);
+  -ms-transform: translateY(100%) translateY(-5px);
+  -o-transform: translateY(100%) translateY(-5px);
+  transition: all 0.2s;
+}
+
+.buttons button {
+  background: none;
+  border: 0;
+  outline: 0;
   cursor: pointer;
+  border-radius: 90deg;
+  background: #000000;
 }
-@media (min-width: 991px) {
-  .video__player {
-    width: 350px;
-    height: 240px;
-  }
+
+.buttons button:before {
+  content: "";
+  position: absolute;
+  background: url("./../img/video/play.svg") center no-repeat;
+  top: -26px;
+  right: 4px;
+  width: 21px;
+  height: 23px;
 }
-@media (min-width: 1200px) {
-  .video__player {
-    width: 100%;
-    height: 100%;
-    max-width: 590px;
-    max-height: 330px;
-  }
+
+.buttons button.play:before {
+  display: block;
+  content: "";
+  background: url("./../img/video/play.svg") center no-repeat;
 }
-.video video {
-  max-width: 100%;
-  max-height: 100%;
+
+.buttons button.pause:before {
+  content: "";
+  background: url("./../img/video/pause.png") center no-repeat;
+  width: 23px;
+}
+
+.orange-bar {
+  height: 0;
+  top: 0;
+  left: 0;
+  width: 90%;
+  background: black;
+}
+
+.orange-juice {
+  height: 10px;
+  width: 100px;
+  background-color: #3d1d64;
 }
 
 .user__list {
@@ -1595,6 +1744,7 @@ template {
 @media all and (min-width: 1100px) {
   .FAQ__title {
     margin-top: 0;
+    margin-bottom: 30px;
   }
 }
 @media all and (min-width: 630px) {
@@ -1604,6 +1754,12 @@ template {
 }
 .FAQ__detail {
   border-radius: 15px;
+}
+@media all and (min-width: 1100px) {
+  .FAQ__detail {
+    padding: 40px 50px;
+    margin-bottom: 20px;
+  }
 }
 .FAQ__summary {
   display: flex;
@@ -1625,6 +1781,12 @@ template {
     font-size: 16px;
     line-height: 19px;
   }
+}
+.FAQ__svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
 }
 
 details[open] img {
@@ -1801,6 +1963,11 @@ details {
 }
 .footer .menu__button {
   background: url("./../img/footer/border-bottom.svg") center no-repeat;
+}
+@media (min-width: 860px) {
+  .footer .menu__button {
+    background: url("./../img/footer/border-button.svg") center no-repeat;
+  }
 }
 .footer__item:nth-child(1) {
   grid-area: logo;

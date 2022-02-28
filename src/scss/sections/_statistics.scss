@@ -2,6 +2,11 @@
 	width: 100%;
 	background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
 	position: relative;
+	z-index: -11;
+
+	@media (min-width: 991px) {
+		padding: 210px 0 50px;
+	}
 
 	// .statistics__inner
 	&__inner {
@@ -63,6 +68,12 @@
 			display: flex;
 			justify-content: space-between;
 			margin-top: 40px;
+		}
+
+		@media (min-width: 991px) {
+
+			max-width: 100%;
+
 		}
 	}
 

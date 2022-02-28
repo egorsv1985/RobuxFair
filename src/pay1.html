@@ -5,20 +5,23 @@
 })
 
 <body>
+	<div class="wrapper">
 	@@include('html/header.html', {})
 
-	<section class="create">
+	<section class="create pay1">
 		<div class="container">
 		@@include('html/blocks/pay.html', {
 		"h2": "Купить робуксы"
 		})
 	@@include('html/blocks/form.html', {})
 	@@include('html/blocks/attention.html', {})
+	<h2 class="pay1__title title">Как создать?</h2>
 	@@include('html/blocks/video.html', {})
 </div>
 	</section>
 
 	@@include('html/footer.html', {})
+</div>
 	<script src="js/app.min.js"></script>
 </body>
 

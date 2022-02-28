@@ -8,6 +8,7 @@
 <title>Главная</title>
 </head>
 <body>
+<div class="wrapper">
 <header class="header">
 <div class="container">
 <div class="header__body">
@@ -34,9 +35,11 @@
 </div>
 </header>
 <section class="faq">
+<div class="faq__wrapper">
 <div class="container">
+<div class="faq__wrap">
 <div class="info__pay pay">
-<h2 class="pay__title title">Купить робуксы</h2>
+<h2 class="pay__title title">Как купить?</h2>
 <ul class="pay__steps">
 <li class="pay__step">
 <div class="pay__step-fon">
@@ -65,9 +68,30 @@
 </ul>
 <a href="create.html" class="info__btn painted-btn">КУПИТЬ РОБУКСЫ</a>
 </div>
-<div class="video">
-<video class="video__player" src="" poster="img/main/poster.png"></video>
+<div class="c-video">
+<video class="video__player" controls preload="auto" src="files/robux.mp4" poster="img/main/poster.png"></video>
+<div class="controls">
+<div class="orange-bar">
+<div class="orange-juice"></div>
 </div>
+<div class="buttons">
+<button id="play-pause"></button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- <svg class="FAQ__svg" width="1440" height="668" viewBox="0 0 1440 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M126 548C22.8461 524.022 -118.333 480.5 -128 453L-161 -809H1560.5V668C1499.83 642.333 1355.8 582.4 1265 548C1151.5 505 955 498 800.5 535C646 572 351.758 600.478 126 548Z" fill="url(#paint0_linear_41_895)"/>
+<defs>
+<linearGradient id="paint0_linear_41_895" x1="699.75" y1="-809" x2="699.75" y2="668" gradientUnits="userSpaceOnUse">
+<stop stop-color="#190C25"/>
+<stop offset="1" stop-color="#16013D"/>
+</linearGradient>
+</defs>
+</svg> -->
+<div class="container">
 <h2 class="FAQ__title title">FAQ</h2>
 <details open class="FAQ__detail">
 <summary class="FAQ__summary">
@@ -220,6 +244,7 @@
 </div>
 </div>
 </footer>
+</div>
 <script src="js/app.min.js"></script>
 </body>
 </html>
