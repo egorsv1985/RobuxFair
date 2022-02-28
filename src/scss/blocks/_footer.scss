@@ -32,8 +32,17 @@
 		}
 	}
 
+	// .menu__link-button
+	.menu__button {
+
+		background: url("./../img/footer/border-bottom.svg") center no-repeat;
+	}
+
 	// .footer__item
 	&__item {
+
+
+
 		&:nth-child(1) {
 			grid-area: logo;
 
@@ -72,6 +81,7 @@
 
 		&:nth-child(5) {
 			grid-area: button;
+			width: 100%;
 
 			@media (max-width:860px) {
 				margin-bottom: 10px;
