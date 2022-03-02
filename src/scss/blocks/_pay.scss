@@ -3,6 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	width: 100%;
+	position: relative;
 
 	@media (min-width: 576px) {
 		flex-direction: row;
@@ -17,9 +18,24 @@
 		width: 100%;
 	}
 
-	@media (min-width: 1439px) {
+	@media (min-width: 1220px) {
 		justify-content: flex-start;
 		width: 50%;
+	}
+
+	&::before {
+		@media (min-width: 1200px) {
+			content: '';
+			position: absolute;
+			background-image: url('./../img/info/Frame3.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 113px;
+			height: 82px;
+			bottom: -19%;
+			left: -15%;
+
+		}
 	}
 
 	// .pay__steps
@@ -27,6 +43,7 @@
 		margin: 10px 0 15px;
 		position: relative;
 		width: 100%;
+		z-index: 5;
 
 		@media (min-width: 768px) {
 			display: flex;
@@ -49,12 +66,7 @@
 			background-color: #2F1D45;
 			z-index: -1;
 
-			@media (min-width: 1000px) {
-				width: 85%;
-				height: 8px;
-				bottom: 85px;
-				left: 65px;
-			}
+
 
 			@media (min-width: 768px) {
 				width: 75%;
@@ -62,6 +74,20 @@
 				bottom: 85px;
 				left: 95px;
 			}
+
+			@media (min-width: 1000px) {
+
+
+				left: 130px;
+			}
+
+			@media (min-width: 1220px) {
+
+
+				left: 85px;
+			}
+
+
 		}
 
 	}

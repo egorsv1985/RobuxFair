@@ -3,6 +3,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column-reverse;
+	position: relative;
 
 	@media (min-width: 576px) {
 		margin-top: 60px;
@@ -14,10 +15,40 @@
 		margin-top: 140px;
 	}
 
+	&::before {
+		@media (min-width: 1200px) {
+			content: '';
+			position: absolute;
+			background-image: url('./../img/info/Frame4.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 77px;
+			height: 91px;
+			top: 2%;
+			right: -3%;
+
+		}
+	}
+
+	&::after {
+		@media (min-width: 1100px) {
+			content: '';
+			position: absolute;
+			background-image: url('./../img/info/Frame5.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 60px;
+			height: 88px;
+			bottom: -4%;
+			right: 19%;
+
+		}
+	}
+
 	// .lottery__img
 	&__img {
 		margin-top: 30px;
-		width: 300px;
+		width: 320px;
 		height: 310px;
 		object-fit: cover;
 
@@ -90,7 +121,7 @@
 
 	// .lottery__btn
 	&__btn {
-		margin-top: 25px;
+		margin-top: 20px;
 
 		@media (min-width: 991px) {
 			margin-top: 25px;

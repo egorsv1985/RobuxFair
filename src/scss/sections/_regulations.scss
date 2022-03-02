@@ -1,0 +1,34 @@
+.regulations {
+	position: relative;
+	top: -68px;
+	padding-top: 95px;
+	padding-bottom: 70px;
+	height: 100vh;
+
+	// .regulations__title
+	&__title {
+		margin-bottom: 5px;
+		max-width: 895px;
+	}
+
+	// .regulations__text
+	&__text {
+		margin-bottom: 30px;
+		max-width: 895px;
+
+	}
+
+	// .regulations__subtitle
+	&__subtitle {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 10px;
+		max-width: 895px;
+	}
+
+	// .regulations__text--bottom
+	&__text--bottom {
+		max-width: 895px;
+	}
+}

@@ -5,8 +5,13 @@
 
 
 	&__wrapper {
-		background: url("./../img/faq/faq-bg.png");
+		background-image: url("./../img/faq/faq-bg-mob.png");
 		background-size: cover;
+
+		@media (min-width: 1100px) {
+			background-image: url("./../img/faq/faq-bg.png");
+			background-size: cover;
+		}
 
 		padding: 110px 0 260px;
 	}
@@ -15,5 +20,20 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 138px;
+
+		&::after {
+			@media (min-width: 1100px) {
+				content: '';
+				position: absolute;
+				background-image: url('./../img/info/Frame5.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 60px;
+				height: 88px;
+				bottom: -4%;
+				right: 19%;
+
+			}
+		}
 	}
 }

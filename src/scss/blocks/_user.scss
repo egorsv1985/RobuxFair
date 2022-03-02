@@ -6,7 +6,7 @@
 		flex-direction: column;
 		gap: 20px;
 
-		@media (min-width: 1023px) {
+		@media (min-width: 767px) {
 			flex-direction: row;
 			justify-content: space-between;
 			flex-wrap: wrap;
@@ -23,8 +23,8 @@
 		border-radius: 15px;
 		padding: 20px;
 
-		@media (min-width: 1023px) {
-			width: 30%;
+		@media (min-width: 767px) {
+			width: 31%;
 
 		}
 	}

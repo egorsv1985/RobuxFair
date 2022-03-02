@@ -1,12 +1,19 @@
 .info {
 	width: 100%;
 	position: relative;
+	top: -220px;
+	padding: 190px 0 170px;
 
-	// background: url("./../img/info/frame1.png") 50% 20% no-repeat;
-	// url("./../img/info/frame2.png") 200px 150px no-repeat,
-	// url("./../img/info/frame3.png") 500px 250px no-repeat,
-	// url("./../img/info/frame4.png") 400px 350px no-repeat,
-	// url("./../img/info/frame5.png") 800px 450px no-repeat;
+	background: url("./../img/info/info-bg-mob.png") center center no-repeat;
+	background-size: cover;
+	z-index: -1;
+
+
+	@media (min-width: 500px) {
+		background: url("./../img/info/info-bg.png") center center no-repeat;
+
+		background-size: cover;
+	}
 
 
 	// background-size: cover;
@@ -41,6 +48,36 @@
 			flex-wrap: wrap;
 			align-items: center;
 			justify-content: space-between
+		}
+
+		&::before {
+			@media (min-width: 1100px) {
+				content: '';
+				position: absolute;
+				background-image: url('./../img/info/Frame1.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 113px;
+				height: 82px;
+				top: 8%;
+				right: 16%;
+
+			}
+		}
+
+		&::after {
+			@media (min-width: 1100px) {
+				content: '';
+				position: absolute;
+				background-image: url('./../img/info/Frame2.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				width: 117px;
+				height: 56px;
+				top: 11%;
+				left: 40%;
+
+			}
 		}
 	}
 

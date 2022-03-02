@@ -9,6 +9,7 @@
 	@include flex (center, center);
 	padding: 16px 60px;
 	text-transform: uppercase;
+
 	max-width: 320px;
 	white-space: nowrap;
 
@@ -22,12 +23,14 @@
 	display: none;
 
 	@media (min-width: 768px) {
-		display: block;
+		display: flex;
+		margin-bottom: 20px;
 	}
 }
 
 .info__btn {
-	display: block;
+	display: flex;
+	margin-top: 20px;
 
 	@media (min-width: 768px) {
 		display: none;
