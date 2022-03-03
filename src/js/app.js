@@ -81,6 +81,22 @@ export function menuClose() {
 
 menuInit();
 
+export function headerScrolled() {
+	window.addEventListener('scroll', function() {
+		const header = document.querySelector('.header')
+		if (window.pageYOffset >= 150) {
+				  console.log("hello");
+				  header.classList.add("scrolled");
+			} else {
+					  console.log("buy");
+					  header.classList.remove("scrolled");
+					}
+	  });
+}
+headerScrolled();
+
+
+
 
 // video
 const video = document.querySelector(".c-video");
@@ -88,25 +104,25 @@ const juice = document.querySelector(".orange-juice");
 const btn = document.getElementById("play-pause");
 
 function togglePlayPause() {
-  if (video.paused) {
-    btn.className = "pause";
-    video.play();
-  } else {
-    btn.className = "play";
-    video.pause();
-  }
+	if (video.paused) {
+		btn.className = "pause";
+		video.play();
+	} else {
+		btn.className = "play";
+		video.pause();
+	}
 }
 
 video.onclick = function () {
-  togglePlayPause();
+	togglePlayPause();
 };
 btn.onclick = function () {
-  togglePlayPause();
+	togglePlayPause();
 };
 video.addEventListener("timeupdate", function () {
-  const juicePos = video.currentTime / video.duration;
-  juice.style.width = juicePos * 100 + "%";
-  if (video.ended) {
-    btn.className = "play";
-  }
+	const juicePos = video.currentTime / video.duration;
+	juice.style.width = juicePos * 100 + "%";
+	if (video.ended) {
+		btn.className = "play";
+	}
 });

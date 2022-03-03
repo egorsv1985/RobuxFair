@@ -23,6 +23,24 @@
 		width: 50%;
 	}
 
+
+
+	&::after {
+		@media (min-width: 1200px) {
+			content: '';
+			position: absolute;
+			background-image: url('./../img/info/Frame-right-top.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 60px;
+			height: 68px;
+			bottom: 18%;
+			right: 2%;
+
+
+		}
+	}
+
 	&::before {
 		@media (min-width: 1200px) {
 			content: '';
@@ -32,8 +50,9 @@
 			background-size: cover;
 			width: 113px;
 			height: 82px;
-			bottom: -19%;
-			left: -15%;
+			bottom: 18%;
+			left: -5%;
+			transform: rotate(160deg);
 
 		}
 	}

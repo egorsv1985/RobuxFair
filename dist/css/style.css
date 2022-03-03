@@ -228,6 +228,16 @@ select {
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
 button,
 [type=button],
 [type=reset],
@@ -487,11 +497,11 @@ template {
 .info {
   width: 100%;
   position: relative;
-  top: -220px;
-  padding: 190px 0 170px;
+  margin-top: -230px;
+  padding: 190px 0 120px;
   background: url("./../img/info/info-bg-mob.png") center center no-repeat;
   background-size: cover;
-  z-index: -1;
+  z-index: 1;
 }
 @media (min-width: 500px) {
   .info {
@@ -683,7 +693,8 @@ template {
   background-size: cover;
   height: 100vh;
   position: relative;
-  top: -68px;
+  margin-top: -68px;
+  z-index: 2;
 }
 @media (min-width: 500px) {
   .about {
@@ -744,20 +755,25 @@ template {
 .statistics {
   width: 100%;
   position: relative;
-  z-index: -11;
+  z-index: 0;
   background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
-  top: -320px;
+  margin-top: -70px;
   padding-top: 30px;
 }
 @media (min-width: 500px) {
   .statistics {
     padding: 100px 0 50px;
-    top: -390px;
+    margin-top: -180px;
+  }
+}
+@media (min-width: 1200px) {
+  .statistics {
+    margin-top: -150px;
   }
 }
 @media (min-width: 1500px) {
   .statistics {
-    top: -350px;
+    margin-top: -100px;
   }
 }
 .statistics__inner {
@@ -936,7 +952,7 @@ template {
 .faq {
   background: linear-gradient(122.91deg, #201081 0%, #1E0043 72.07%, #5C003E 98.6%);
   position: relative;
-  top: -68px;
+  margin-top: -68px;
 }
 .faq__wrapper {
   background-image: url("./../img/faq/faq-bg-mob.png");
@@ -1007,10 +1023,14 @@ template {
   height: 55px;
 }
 
+.scrolled {
+  background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
+}
+
 .header {
   position: sticky;
   z-index: 50;
-  top: 8px;
+  top: 0;
   left: 0;
   width: 100%;
 }
@@ -1092,6 +1112,7 @@ template {
   padding: 15px 32px;
   white-space: nowrap;
   background: url("./../img/footer/border-button.svg") center no-repeat;
+  background-size: contain;
 }
 .icon-menu {
   display: none;
@@ -1207,6 +1228,7 @@ template {
 
 .form {
   margin-top: 15px;
+  margin-bottom: 20px;
 }
 @media all and (min-width: 630px) {
   .form {
@@ -1225,6 +1247,7 @@ template {
     margin: 0 auto;
     justify-content: space-between;
     margin-top: 55px;
+    margin-bottom: 100px;
   }
 }
 .form__RUB, .form__robux, .form__name {
@@ -1310,6 +1333,7 @@ template {
   display: flex;
   flex-direction: column-reverse;
   position: relative;
+  margin-bottom: 50px;
 }
 @media (min-width: 576px) {
   .lottery {
@@ -1321,6 +1345,7 @@ template {
 @media (min-width: 991px) {
   .lottery {
     margin-top: 140px;
+    margin-bottom: 100px;
   }
 }
 @media (min-width: 1200px) {
@@ -1351,7 +1376,8 @@ template {
 }
 .lottery__img {
   margin-top: 30px;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 310px;
   object-fit: cover;
 }
@@ -1363,14 +1389,14 @@ template {
 }
 @media (min-width: 991px) {
   .lottery__img {
-    width: 400px;
+    min-width: 400px;
     height: 390px;
     margin-right: 85px;
   }
 }
 @media (min-width: 1200px) {
   .lottery__img {
-    width: 525px;
+    min-width: 525px;
     height: 510px;
   }
 }
@@ -1459,6 +1485,19 @@ template {
   }
 }
 @media (min-width: 1200px) {
+  .pay::after {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/info/Frame-right-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 68px;
+    bottom: 18%;
+    right: 2%;
+  }
+}
+@media (min-width: 1200px) {
   .pay::before {
     content: "";
     position: absolute;
@@ -1467,8 +1506,9 @@ template {
     background-size: cover;
     width: 113px;
     height: 82px;
-    bottom: -19%;
-    left: -15%;
+    bottom: 18%;
+    left: -5%;
+    transform: rotate(160deg);
   }
 }
 .pay__steps {
@@ -1688,6 +1728,36 @@ template {
   background-color: #3d1d64;
 }
 
+.users {
+  position: relative;
+}
+@media (min-width: 1100px) {
+  .users::before {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/users/Frame-left-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 68px;
+    top: 0;
+    left: -7%;
+  }
+}
+@media (min-width: 1100px) {
+  .users::after {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/users/Frame-right-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 117px;
+    height: 57px;
+    top: -9%;
+    right: -9%;
+  }
+}
+
 .user__list {
   display: flex;
   flex-direction: column;
@@ -1836,6 +1906,33 @@ template {
   padding: 20px;
   background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
   border-radius: 15px;
+  position: relative;
+}
+@media (min-width: 1100px) {
+  .card::before {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/users/Frame-left-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60px;
+    height: 68px;
+    top: 0;
+    left: -7%;
+  }
+}
+@media (min-width: 1100px) {
+  .card::after {
+    content: "";
+    position: absolute;
+    background-image: url("./../img/users/Frame-right-top.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 117px;
+    height: 57px;
+    top: -9%;
+    right: -9%;
+  }
 }
 .card__envelope {
   display: flex;
@@ -1893,7 +1990,7 @@ template {
 }
 @media all and (min-width: 1100px) {
   .FAQ__title {
-    margin-top: 0;
+    margin-top: 100px;
     margin-bottom: 30px;
   }
 }
@@ -2081,30 +2178,20 @@ details {
   }
 }
 
-.footer__index {
-  position: relative;
-  top: -320px;
-}
-@media (min-width: 500px) {
-  .footer__index {
-    top: -390px;
-  }
-}
-@media (min-width: 860px) {
-  .footer__index {
-    padding-top: 43px;
-    padding-bottom: 30px;
-    font-size: 16px;
-    line-height: 19px;
-  }
-}
-
 .footer {
   background-color: #170337;
   padding-top: 35px;
   padding-bottom: 28px;
   font-size: 14px;
   line-height: 17px;
+}
+@media (min-width: 860px) {
+  .footer {
+    padding-top: 43px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 .footer__grid {
   display: grid;
@@ -2123,6 +2210,7 @@ details {
 }
 .footer .menu__button {
   background: url("./../img/footer/border-bottom.svg") center no-repeat;
+  background-size: contain;
 }
 @media (min-width: 860px) {
   .footer .menu__button {

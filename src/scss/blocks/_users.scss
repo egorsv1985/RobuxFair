@@ -1,0 +1,33 @@
+.users {
+	position: relative;
+
+	&::before {
+		@media (min-width: 1100px) {
+			content: '';
+			position: absolute;
+			background-image: url('./../img/users/Frame-left-top.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 60px;
+			height: 68px;
+			top: 0;
+			left: -7%;
+
+		}
+	}
+
+	&::after {
+		@media (min-width: 1100px) {
+			content: '';
+			position: absolute;
+			background-image: url('./../img/users/Frame-right-top.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 117px;
+			height: 57px;
+			top: -9%;
+			right: -9%;
+
+		}
+	}
+}

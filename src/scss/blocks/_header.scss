@@ -6,10 +6,14 @@
 	}
 }
 
+.scrolled {
+	background: linear-gradient(180deg, #190C25 0%, #16013D 100%);
+}
+
 .header {
 	position: sticky;
 	z-index: 50;
-	top: 8px;
+	top: 0;
 	left: 0;
 	width: 100%;
 
@@ -111,6 +115,7 @@
 		padding: 15px 32px;
 		white-space: nowrap;
 		background: url("./../img/footer/border-button.svg") center no-repeat;
+		background-size: contain;
 	}
 
 	// .menu__icon

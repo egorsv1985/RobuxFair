@@ -5,7 +5,8 @@
 	height: 100vh;
 
 	position: relative;
-	top: -68px;
+	margin-top: -68px;
+	z-index: 2;
 
 
 	@media (min-width: 500px) {

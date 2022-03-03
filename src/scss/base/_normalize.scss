@@ -254,6 +254,18 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+
+  -webkit-appearance: none;
+
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
 button,
 [type="button"],
 [type="reset"],
