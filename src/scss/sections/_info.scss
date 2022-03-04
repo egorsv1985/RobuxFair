@@ -15,6 +15,9 @@
 		background-size: cover;
 	}
 
+	@media (min-width: 1000px) {
+		margin-top: -170px;
+	}
 
 	// background-size: cover;
 	&__svg {

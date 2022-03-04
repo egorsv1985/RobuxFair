@@ -2491,6 +2491,10 @@ details {
 }
 
 @media (min-width: 1000px) {
+  .info {
+    margin-top: -170px;
+  }
+
   .create .pay__steps::before {
     width: 75%;
     left: 130px;
@@ -2710,7 +2714,7 @@ details {
     width: 113px;
     height: 82px;
     bottom: 18%;
-    left: -5%;
+    left: -19%;
     -webkit-transform: rotate(160deg);
         -ms-transform: rotate(160deg);
             transform: rotate(160deg);

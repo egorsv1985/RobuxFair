@@ -85,10 +85,10 @@ export function headerScrolled() {
 	window.addEventListener('scroll', function() {
 		const header = document.querySelector('.header')
 		if (window.pageYOffset >= 150) {
-				  console.log("hello");
+				 
 				  header.classList.add("scrolled");
 			} else {
-					  console.log("buy");
+					  
 					  header.classList.remove("scrolled");
 					}
 	  });
