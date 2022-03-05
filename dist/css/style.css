@@ -983,7 +983,7 @@ template {
   position: relative;
   margin-bottom: 20px;
   height: 50px;
-  max-width: 323px;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -1004,7 +1004,7 @@ template {
 }
 
 .form__input {
-  max-width: 323px;
+  max-width: 100%;
   width: 100%;
   height: 50px;
   background: inherit;
@@ -1321,6 +1321,14 @@ template {
 }
 
 .user__item {
+  background: -o-linear-gradient(327.09deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
+  background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.user__link {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1328,10 +1336,6 @@ template {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
-  background: -o-linear-gradient(327.09deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
-  background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
-  border-radius: 15px;
-  padding: 20px;
 }
 
 .user__img {
@@ -1557,61 +1561,73 @@ template {
   margin-top: 130px;
 }
 
-.FAQ__detail {
+.FAQ__block {
   border-radius: 15px;
-}
-
-.FAQ__summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.FAQ__subtitle {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.FAQ__text {
-  padding: 0 20px 20px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
-}
-
-.FAQ__svg {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -10;
-}
-
-details[open] img {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
-details > summary {
   list-style-type: none;
   background-color: #160239;
   margin-top: 20px;
   padding: 20px;
+  width: 100%;
 }
 
-summary {
-  color: #ffffff;
-  border-radius: 15px;
+.FAQ__block input {
+  display: none;
 }
 
-details {
-  color: #ffffff;
-  background-color: #160239;
-  border-radius: 15px;
+.FAQ__block input:checked ~ p {
+  font-size: 16px;
+  opacity: 1;
+  -webkit-transition: font-size 300ms 0ms ease-in, opacity 300ms 300ms ease-in;
+  -o-transition: font-size 300ms 0ms ease-in, opacity 300ms 300ms ease-in;
+  transition: font-size 300ms 0ms ease-in, opacity 300ms 300ms ease-in;
+}
+
+.FAQ__block label {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding-right: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.FAQ__block label::before {
+  content: "";
+  display: block;
+  background: url("./../img/faq/arrow.svg") 0 0 no-repeat;
+  background-size: 100%;
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.FAQ__block input:checked ~ label::before {
+  -webkit-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.FAQ__block p {
+  font-size: 0;
+  line-height: 19px;
+  max-width: 800px;
+  margin-top: 15px;
+  padding-right: 10px;
+  opacity: 0;
+  -webkit-transition: font-size 300ms 300ms ease-in, opacity 300ms 0ms ease-in;
+  -o-transition: font-size 300ms 300ms ease-in, opacity 300ms 0ms ease-in;
+  transition: font-size 300ms 300ms ease-in, opacity 300ms 0ms ease-in;
 }
 
 .advantages {
@@ -1969,12 +1985,12 @@ details {
   .form__RUB,
   .form__robux,
   .form__name {
-    max-width: 460px;
+    max-width: 100%;
     height: 60px;
   }
 
   .form__input {
-    max-width: 460px;
+    max-width: 100%;
     height: 60px;
   }
 
@@ -2189,13 +2205,6 @@ details {
 
   .advantages__card-text {
     text-align: center;
-  }
-}
-
-@media all and (min-width: 780px) {
-  .FAQ__text {
-    font-size: 16px;
-    line-height: 19px;
   }
 }
 
@@ -2509,6 +2518,12 @@ details {
   }
 }
 
+@media all and (min-width: 1000px) {
+  .FAQ__block label::before {
+    top: 50%;
+  }
+}
+
 @media (min-width: 1100px) {
   .info__wrap::before {
     content: "";
@@ -2657,7 +2672,7 @@ details {
     margin-bottom: 30px;
   }
 
-  .FAQ__detail {
+  .FAQ__block {
     padding: 40px 50px;
     margin-bottom: 20px;
   }

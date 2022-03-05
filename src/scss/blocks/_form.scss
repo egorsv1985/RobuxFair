@@ -26,11 +26,11 @@
 		position: relative;
 		margin-bottom: 20px;
 		height: 50px;
-		max-width: 323px;
+		max-width: 100%;
 		width: 100%;
 
 		@media all and (min-width: 630px) {
-			max-width: 460px;
+			max-width: 100%;
 			height: 60px;
 		}
 
@@ -59,7 +59,7 @@
 
 	// .form__input
 	&__input {
-		max-width: 323px;
+		max-width: 100%;
 		width: 100%;
 		height: 50px;
 		background: inherit;
@@ -72,7 +72,7 @@
 		color: #ffffff;
 
 		@media all and (min-width: 630px) {
-			max-width: 460px;
+			max-width: 100%;
 			height: 60px;
 		}
 

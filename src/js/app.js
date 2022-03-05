@@ -126,3 +126,33 @@ video.addEventListener("timeupdate", function () {
 		btn.className = "play";
 	}
 });
+
+
+// SPOLLERS
+const spollersArray = document.querySelectorAll('[data-spollers]');
+if(spollersArray.length>0) {
+	const spollersRegular = Array.from(spollersArray).filter(function (item, index, self){
+		return !item.dataset.spollers.split(","[0]);
+	});
+	if(spollersRegular.length>0){
+		initSpollers(spollersRegular);
+	}
+
+	const spollersMedia = Array.from(spollersArray).filter(function (item, index, self){
+		return item.dataset.spollers.split(","[0]);
+	});
+
+	if(spollersMedia.length>0) {
+		const breakPointsArray = [];
+		spollersMedia.forEach(item => {
+			const params = item.dataset.spollers;
+			const breakPoint = {};
+			const paramsArray = params.split(",");
+			breakPoint.value = paramsArray[0];
+			breakPoint.type = paramsArray[i] ? paramsArray[1].trim() : "max";
+			breakPoint.irem = item;
+			breakPointsArray.push(breakPoints);
+		});
+	}
+}
+// SlideToggle

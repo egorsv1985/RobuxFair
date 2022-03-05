@@ -16,9 +16,7 @@
 
 	// .user__item
 	&__item {
-		display: flex;
-		align-items: center;
-		gap: 20px;
+
 		background: linear-gradient(122.91deg, #58378F 0%, #35145F 72.07%, #34005C 98.6%);
 		border-radius: 15px;
 		padding: 20px;
@@ -28,6 +26,14 @@
 
 		}
 	}
+
+	&__link {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+	}
+
 
 	// .user__img
 	&__img {
