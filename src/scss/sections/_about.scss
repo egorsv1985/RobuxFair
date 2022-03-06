@@ -2,6 +2,7 @@
 	width: 100%;
 	background: url("./../img/about/about-bg.png") center no-repeat;
 	background-size: cover;
+	background-position: bottom;
 	height: 100vh;
 
 	position: relative;
@@ -11,7 +12,7 @@
 
 	@media (min-width: 500px) {
 		background: url("./../img/about/about-bg-big.png") center no-repeat;
-
+		background-position: bottom;
 		background-size: cover;
 
 
