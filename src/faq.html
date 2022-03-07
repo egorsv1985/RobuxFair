@@ -5,33 +5,32 @@
 })
 
 <body>
-	<div class="wrapper">
-	@@include('html/header.html', {})
-	
-	<section class="faq">
-		
-			<div class="faq__wrapper">
-				<div class="container">
-					<div class="faq__wrap">
-			@@include('html/blocks/pay.html', {
-				"h2": "Как купить?"
-				})
-	
-	@@include('html/blocks/video.html', {})
-</div>
-</div>
-</div>
+<div class="wrapper">
+@@include('html/header.html', {})
 
-		
+<section class="faq">
+<div class="faq__wrapper">
 <div class="container">
-	@@include('html/blocks/faq-block.html', {})
-	@@include('html/blocks/advantages.html', {})
-</div>
-	</section>
+<div class="faq__wrap">
+@@include('html/blocks/pay.html', {
+"h2": "Как купить?"
+})
 
-	@@include('html/footer.html', {})
+@@include('html/blocks/video.html', {})
 </div>
-	<script src="js/app.min.js"></script>
+</div>
+</div>
+
+<div class="container">
+@@include('html/blocks/faq-block.html', {})
+@@include('html/blocks/advantages.html', {})
+</div>
+</section>
+
+@@include('html/footer.html', {})
+</div>
+
+<script src="js/app.min.js"></script>
 </body>
 
 </html>
